@@ -1,5 +1,5 @@
+#to find floid triangle
 from time import *
-
 def flyod():
   n=int(input('enter the value'))
   c=0
@@ -8,6 +8,11 @@ def flyod():
       c=c+1
       print(c,end=" ")
     print()
+#output : 
+'''1
+   2 3
+   4 5 6
+   7 8 9 10 '''
 
 
 
@@ -20,10 +25,8 @@ def pascalnew(n):
     for i in range(n):
       for k in range(n-i):
         print(end=" ")
-      sleep(1)
-       
       if h==0:
-           print('1'.center(10))
+           print(1)
           
       elif h==1:
             print(1,'',1)
@@ -68,7 +71,6 @@ def gcd():
     print(d)
 
 
-pascalnew(10)
 
 
 
@@ -93,7 +95,63 @@ q.start()
 p.join()
 q.join()
 print('bye')
+
+
+
+
+def name_pattern():
+  a='mohamadshahulhamid'
+  c=0
+  while c<len(a):
+      print(a[c],end='   ')
+      c=c+4
+  print()
+  i=1
+  while i<len(a):
+      print(a[i],end=' ')
+      i+=2
+  print()
+  c=2
+  while c<len(a):
+      print(a[c],end='   ')
+      c=c+4
+#output
+'''m   m   h   l   i
+o a a s a u h m d
+h   d   h   a
+'''
+
+
+class Solution(object):
+    def maxArea(self, height):
+        """
+        :type height: max_areast[int]
+        :rtype: int
+        """
+        self.height=height
+        myList=self.height
+        max_areas=[]
+        for i in range(0,len(myList)):
+            area=0
+            for j in range(i):
+                mini=min(myList[i],myList[j])
+                p=(i-j)*mini
+                if p>area:
+                    area=p
+            max_areas.append(area)
+        return(max(max_areas))
+obj=Solution()
+print(obj.maxArea([32,5,6,7,5,6]))
+#output:
+'''find largest area between two lines
+by ploting each value at graph
+out: 30
+
+'''
+ 
+           
     
+
                 
 
 

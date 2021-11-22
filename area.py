@@ -18,6 +18,12 @@ class Solution(object):
         return(max(max_areas))
 obj=Solution()
 print(obj.maxArea([32,5,6,7,5,6]))  
+#output:
+'''find largest area between two lines
+by ploting each value at graph
+out: 30
+
+'''
             
        
     
