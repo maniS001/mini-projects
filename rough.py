@@ -1,17 +1,52 @@
-a='manikandan'
+import random
+from copy import deepcopy
+r=4
+l=4
+e=0
 c=0
-while c<len(a):
-    print(a[c],end='   ')
-    c=c+4
-print()
-i=1
-while i<len(a):
-    print(a[i],end=' ')
-    i+=2
-print()
-c=2
-while c<len(a):
-    print(a[c],end='   ')
-    c=c+4
+b=[]
+a=[[random.randint(0,20) for i in range(l) ] for j in range(r)]
+t=deepcopy(r*l)
+while e<=t:
+    back=False
+    for i in range(r):
+        if i==c:
+            for j in range(l):
+                b.append(a[i][j])
+                e+=1
+        elif i<r-1 and i!=c:
+            b.append(a[i][l-1])
+            e+=1
+        else:
+            c=0
+            for j in range(l):
+                c-=1
+                b.append(a[i][c])
+                e+=1 
+            back= True 
+            c=c+1
+            r=r-2 
+            l=l-1
+        if back==True:
+            pass
+            
+
+
+                 
+print(a)
+print(b)
+
+            
+
+
+
+
+     
+            
+
+        
+    
+
+    
 
 
